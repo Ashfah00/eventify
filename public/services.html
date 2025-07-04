@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services - Eventify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="dark-theme">
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="services.html" class="active"><i class="fas fa-concierge-bell"></i> Services</a>
+      <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+      <div class="nav-right">
+        <a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="signup.html" class="btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+      </div>
+    </nav>
+    <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+  </header>
+
+  <section class="page-hero">
+    <h1>Our <span class="highlight">Services</span></h1>
+    <p>Comprehensive solutions for all your event planning needs</p>
+  </section>
+
+  <section class="services-section">
+    <div class="service-tabs">
+      <button class="tab active" data-tab="all">All Services</button>
+      <button class="tab" data-tab="entertainment">Entertainment</button>
+      <button class="tab" data-tab="catering">Catering</button>
+      <button class="tab" data-tab="decor">Decor</button>
+      <button class="tab" data-tab="photography">Photography</button>
+    </div>
+
+    <div class="services-container">
+      <!-- Entertainment Services -->
+      <div class="service-category" id="entertainment">
+        <h2 class="category-title">Entertainment <span class="highlight">🎵</span></h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/dj ash.jpg" alt="DJ Services">
+            </div>
+            <div class="service-info">
+              <h3>DJ Services</h3>
+              <p>Professional DJs with top-notch equipment for any event</p>
+              <div class="service-meta">
+                <span class="price">From 50 000/=</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/dj y.jpg" alt="Live Bands">
+            </div>
+            <div class="service-info">
+              <h3>Live Bands</h3>
+              <p>Talented musicians covering various genres for your event</p>
+              <div class="service-meta">
+                <span class="price">From 75 000/=</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catering Services -->
+      <div class="service-category" id="catering">
+        <h2 class="category-title">Catering <span class="highlight">🍽️</span></h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/cater.jpg" alt="Wedding Catering">
+            </div>
+            <div class="service-info">
+              <h3>Wedding Catering</h3>
+              <p>Elegant dining experiences tailored for your special day</p>
+              <div class="service-meta">
+                <span class="price">From 2500/= per plate</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/cake 1.jpg" alt="Custom Cakes">
+            </div>
+            <div class="service-info">
+              <h3>Custom Cakes</h3>
+              <p>Beautiful and delicious cakes designed just for you</p>
+              <div class="service-meta">
+                <span class="price">From 15 000/=</span>
+                <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photography Services -->
+      <div class="service-category" id="photography">
+        <h2 class="category-title">Photography <span class="highlight">📸</span></h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/dimitri.jpg" alt="Wedding Photography">
+            </div>
+            <div class="service-info">
+              <h3>Wedding Photography</h3>
+              <p>Capture every precious moment of your special day</p>
+              <div class="service-meta">
+                <span class="price">From 50 000/=</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/events.jpg" alt="Event Photography">
+            </div>
+            <div class="service-info">
+              <h3>Event Photography</h3>
+              <p>Professional coverage for all types of events</p>
+              <div class="service-meta">
+                <span class="price">From 40 000/=</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decor Services -->
+      <div class="service-category" id="decor">
+        <h2 class="category-title">Decor <span class="highlight">💐</span></h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img src="../images/decoo.jpg" alt="Floral Decor">
+            </div>
+            <div class="service-info">
+              <h3>Floral Decor</h3>
+              <p>Stunning floral arrangements to transform your venue</p>
+              <div class="service-meta">
+                <span class="price">From 35 000/=</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <button class="btn-outline">View Options</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Can't Find What You're Looking For?</h2>
+      <p>We have many more services available. Contact us for custom solutions.</p>
+      <button class="btn-primary" onclick="location.href='contact.html'">
+        <i class="fas fa-envelope"></i> Contact Our Team
+      </button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

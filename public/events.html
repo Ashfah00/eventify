@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events - Eventify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="dark-theme">
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+      <a href="events.html" class="active"><i class="fas fa-calendar-alt"></i> Events</a>
+      <div class="nav-right">
+        <a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="signup.html" class="btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+      </div>
+    </nav>
+    <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+  </header>
+
+  <section class="page-hero">
+    <h1>Featured <span class="highlight">Events</span></h1>
+    <p>Explore our portfolio of beautifully executed events</p>
+  </section>
+
+  <section class="events-section">
+    <div class="event-filters">
+      <div class="filter-group">
+        <label>Event Type:</label>
+        <select id="eventTypeFilter">
+          <option value="all">All Events</option>
+          <option value="wedding">Weddings</option>
+          <option value="birthday">Birthdays</option>
+          <option value="corporate">Corporate</option>
+          <option value="social">Social</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Location:</label>
+        <select id="locationFilter">
+          <option value="all">All Locations</option>
+          <option value="colombo">Colombo</option>
+          <option value="galle">Galle</option>
+          <option value="kandy">Kandy</option>
+          <option value="negombo">Negombo</option>
+        </select>
+      </div>
+      <button class="btn-outline"><i class="fas fa-filter"></i> Apply Filters</button>
+    </div>
+
+    <div class="events-gallery">
+      <div class="event-card" data-type="wedding" data-location="colombo">
+        <div class="event-image">
+          <img src="../images/beach.jpg" alt="Wedding in Colombo">
+          <div class="event-badge">Wedding</div>
+        </div>
+        <div class="event-info">
+          <h3>Colombo Beach Wedding</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
+          <div class="event-services">
+            <span>Photography</span>
+            <span>Decor</span>
+            <span>Catering</span>
+          </div>
+          <button class="btn-outline">View Details</button>
+        </div>
+      </div>
+
+      <div class="event-card" data-type="birthday" data-location="galle">
+        <div class="event-image">
+          <img src="../images/party.jpg" alt="Birthday Party">
+          <div class="event-badge">Birthday</div>
+        </div>
+        <div class="event-info">
+          <h3>Surprise Birthday Party</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Galle, Sri Lanka</p>
+          <div class="event-services">
+            <span>Entertainment</span>
+            <span>Catering</span>
+          </div>
+          <button class="btn-outline">View Details</button>
+        </div>
+      </div>
+
+      <div class="event-card" data-type="wedding" data-location="negombo">
+        <div class="event-image">
+          <img src="../images/wed.jpg" alt="Wedding in Negombo">
+          <div class="event-badge">Wedding</div>
+        </div>
+        <div class="event-info">
+          <h3>Modern Wedding</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Negombo, Sri Lanka</p>
+          <div class="event-services">
+            <span>Photography</span>
+            <span>Decor</span>
+            <span>Catering</span>
+            <span>Entertainment</span>
+          </div>
+          <button class="btn-outline">View Details</button>
+        </div>
+      </div>
+
+
+      <div class="event-card" data-type="anniversary" data-location="kandy">
+        <div class="event-image">
+          <img src="../images/gallery 1.jpg" alt="Anniversary Event">
+          <div class="event-badge">Birthday</div>
+        </div>
+        <div class="event-info">
+          <h3>1st year Anniversary Celebration</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Kandy, Sri Lanka</p>
+          <div class="event-services">
+            <span>Decor</span>
+            <span>Entertainment</span>
+            <span>Catering</span>
+          </div>
+          <button class="btn-outline">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Create Your Own Amazing Event?</h2>
+      <p>Let us help you plan something truly special</p>
+      <button class="btn-primary" onclick="location.href='signup.html'">
+        <i class="fas fa-calendar-plus"></i> Start Planning
+      </button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
