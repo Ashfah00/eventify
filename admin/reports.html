@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports & Analytics - Eventify</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+     <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <span class="welcome">Reports & Analytics</span>
+      <div class="notification-bell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </div>
+      <div class="user-avatar">
+        <i class="fas fa-user-shield"></i>
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="manage-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+        <li><a href="manage-vendors.html"><i class="fas fa-store"></i> Manage Vendors</a></li>
+        <li><a href="view-events.html"><i class="fas fa-calendar-alt"></i> View Events</a></li>
+        <li><a href="content-management.html"><i class="fas fa-edit"></i> Content</a></li>
+        <li class="active"><a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        <li><a href="system-notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="list-page">
+    <div class="page-header">
+      <h1>Reports & Analytics</h1>
+      <div class="page-actions">
+        <div class="date-range">
+          <label>Date Range:</label>
+          <input type="date" id="startDate">
+          <span>to</span>
+          <input type="date" id="endDate">
+          <button class="btn-small"><i class="fas fa-filter"></i> Apply</button>
+        </div>
+        <button class="btn-primary">
+          <i class="fas fa-file-export"></i> Export Report
+        </button>
+      </div>
+    </div>
+    
+    <div class="report-tabs">
+      <button class="tab active">Overview</button>
+      <button class="tab">Users</button>
+      <button class="tab">Vendors</button>
+      <button class="tab">Events</button>
+      <button class="tab">Financial</button>
+    </div>
+    
+    <div class="report-overview">
+      <div class="report-card wide">
+        <h3>Platform Growth</h3>
+        <div class="chart-placeholder">
+          <!-- This would be replaced with an actual chart in implementation -->
+          <img src="https://via.placeholder.com/800x300?text=Growth+Chart" alt="Growth Chart">
+        </div>
+      </div>
+      
+      <div class="report-card">
+        <h3>User Signups</h3>
+        <div class="chart-placeholder">
+          <img src="https://via.placeholder.com/350x200?text=User+Signups+Chart" alt="User Signups Chart">
+        </div>
+        <div class="report-stats">
+          <div class="stat">
+            <span class="stat-value">85</span>
+            <span class="stat-label">Total Users</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">12</span>
+            <span class="stat-label">This Month</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">+8%</span>
+            <span class="stat-label">Growth</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="report-card">
+        <h3>Vendor Performance</h3>
+        <div class="chart-placeholder">
+          <img src="https://via.placeholder.com/350x200?text=Vendor+Performance+Chart" alt="Vendor Performance Chart">
+        </div>
+        <div class="report-stats">
+          <div class="stat">
+            <span class="stat-value">20</span>
+            <span class="stat-label">Total Vendors</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">3</span>
+            <span class="stat-label">New This Month</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">4.3</span>
+            <span class="stat-label">Avg Rating</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="report-card wide">
+        <h3>Event Statistics</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value">30</span>
+            <span class="stat-label">Total Events</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">4</span>
+            <span class="stat-label">Bookings</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">LKR 380 000</span>
+            <span class="stat-label">Revenue</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Wedding</span>
+            <span class="stat-label">Top Location</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">The Foto Cube</span>
+            <span class="stat-label">Top Vendor</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="report-card">
+        <h3>Top Performing Vendors</h3>
+        <div class="top-vendors">
+          <div class="vendor-item">
+            <span class="rank">1</span>
+            <span class="name">The Foto Cube</span>
+            <span class="value">24 events</span>
+          </div>
+          <div class="vendor-item">
+            <span class="rank">2</span>
+            <span class="name">Galle Caters</span>
+            <span class="value">15 events</span>
+          </div>
+          <div class="vendor-item">
+            <span class="rank">3</span>
+            <span class="name">Grand Zenith</span>
+            <span class="value">12 events</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="report-card">
+        <h3>Recent Activity</h3>
+        <div class="activity-list">
+          <div class="activity-item">
+            <i class="fas fa-calendar-plus"></i>
+            <div class="activity-content">
+              <p>New event created: <strong>Bridal Shower</strong></p>
+              <small>Today, 10:30 AM</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-user-plus"></i>
+            <div class="activity-content">
+              <p>New user registration: <strong>P.Yathursan</strong></p>
+              <small>Yesterday, 3:15 PM</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-store"></i>
+            <div class="activity-content">
+              <p>New vendor application: <strong>Flora Events</strong></p>
+              <small>Yesterday, 11:45 AM</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

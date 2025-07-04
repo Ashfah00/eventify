@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Events - Eventify</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <span class="welcome">View All Events</span>
+      <div class="notification-bell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </div>
+      <div class="user-avatar">
+        <i class="fas fa-user-shield"></i>
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="manage-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+        <li><a href="manage-vendors.html"><i class="fas fa-store"></i> Manage Vendors</a></li>
+        <li class="active"><a href="view-events.html"><i class="fas fa-calendar-alt"></i> View Events</a></li>
+        <li><a href="content-management.html"><i class="fas fa-edit"></i> Content</a></li>
+        <li><a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        <li><a href="system-notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="list-page">
+    <div class="page-header">
+      <h1>Event Management</h1>
+      <div class="page-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search events...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="btn-primary">
+          <i class="fas fa-plus"></i> Create Event
+        </button>
+      </div>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active">All Events (50)</button>
+      <button class="tab">Upcoming (10)</button>
+      <button class="tab">Completed (34)</button>
+      <button class="tab">Cancelled (6)</button>
+    </div>
+    
+    <div class="filters">
+      <div class="filter-group">
+        <label>Event Type:</label>
+        <select>
+          <option>All Types</option>
+          <option>Wedding</option>
+          <option>Birthday</option>
+          <option>Corporate</option>
+          <option>Social</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Location:</label>
+        <select>
+          <option>All Locations</option>
+          <option>Colombo</option>
+          <option>Galle</option>
+          <option>Kandy</option>
+          <option>Negombo</option>
+          <option>Mirissa</option>
+          <option>Ella</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Date Range:</label>
+        <input type="date" id="eventStartDate">
+        <span>to</span>
+        <input type="date" id="eventEndDate">
+      </div>
+      <button class="btn-small"><i class="fas fa-filter"></i> Apply</button>
+    </div>
+    
+    <div class="event-list">
+      <div class="event-card">
+        <div class="event-image">
+          <img src="../images/Gallery .jpg" alt="Wedding">
+        </div>
+        <div class="event-details">
+          <h3>Wedding Decorations</h3>
+          <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> Aug 12, 2025</p>
+          <p><i class="fas fa-clock"></i> <strong>Time:</strong> 6:00 PM - 11:00 PM</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Colombo, Sri Lanka</p>
+          <p><i class="fas fa-user"></i> <strong>Organizer:</strong>Ashfa Razik</p>
+          <p><i class="fas fa-tag"></i> <strong>Type:</strong> Wedding</p>
+          <p><i class="fas fa-dollar-sign"></i> <strong>Budget:</strong> LKR 350 000</p>
+          <div class="event-status">
+            <span class="badge confirmed">Confirmed</span>
+          </div>
+        </div>
+        <div class="event-actions">
+          <button class="btn-small btn-primary"><i class="fas fa-eye"></i> View</button>
+          <button class="btn-small"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn-small btn-danger"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+      </div>
+      
+      <div class="event-card">
+        <div class="event-image">
+          <img src="../images/gallery 2.jpg" alt="Birthday Bash">
+        </div>
+        <div class="event-details">
+          <h3>Birthday Bash</h3>
+          <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> Sept 3, 2023</p>
+          <p><i class="fas fa-clock"></i> <strong>Time:</strong> 7:00 PM - 12:00 AM</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Galle, Sri Lanka</p>
+          <p><i class="fas fa-user"></i> <strong>Organizer:</strong> Dilshan</p>
+          <p><i class="fas fa-tag"></i> <strong>Type:</strong> Birthday</p>
+          <p><i class="fas fa-dollar-sign"></i> <strong>Budget:</strong> LKR 35 000</p>
+          <div class="event-status">
+            <span class="badge pending">Pending</span>
+          </div>
+        </div>
+        <div class="event-actions">
+          <button class="btn-small btn-primary"><i class="fas fa-eye"></i> View</button>
+          <button class="btn-small"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn-small btn-danger"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+      </div>
+      
+      <div class="event-card">
+        <div class="event-image">
+          <img src="../images/foto cube.jpg" alt="Anniversary Photography">
+        </div>
+        <div class="event-details">
+          <h3>Wedding Photography</h3>
+          <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> Sept 9th, 2025</p>
+          <p><i class="fas fa-clock"></i> <strong>Time:</strong> All Day</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Kandy, Sri Lanka</p>
+          <p><i class="fas fa-user"></i> <strong>Organizer:</strong> Dinum Kavindi</p>
+          <p><i class="fas fa-tag"></i> <strong>Type:</strong> Photography</p>
+          <p><i class="fas fa-dollar-sign"></i> <strong>Budget:</strong> LKR 100 000</p>
+          <div class="event-status">
+            <span class="badge confirmed">Confirmed</span>
+          </div>
+        </div>
+        <div class="event-actions">
+          <button class="btn-small btn-primary"><i class="fas fa-eye"></i> View</button>
+          <button class="btn-small"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn-small btn-danger"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+      </div>
+      
+    <div class="pagination">
+      <button disabled><i class="fas fa-chevron-left"></i></button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

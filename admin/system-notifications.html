@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Notifications - Eventify</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <span class="welcome">System Notifications</span>
+      <div class="notification-bell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </div>
+      <div class="user-avatar">
+        <i class="fas fa-user-shield"></i>
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="manage-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+        <li><a href="manage-vendors.html"><i class="fas fa-store"></i> Manage Vendors</a></li>
+        <li><a href="view-events.html"><i class="fas fa-calendar-alt"></i> View Events</a></li>
+        <li><a href="content-management.html"><i class="fas fa-edit"></i> Content</a></li>
+        <li><a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        <li class="active"><a href="system-notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="list-page">
+    <div class="page-header">
+      <h1>System Notifications</h1>
+      <div class="page-actions">
+        <button class="btn-primary" id="markAllRead">
+          <i class="fas fa-check-double"></i> Mark All as Read
+        </button>
+        <button class="btn-danger" id="clearAll">
+          <i class="fas fa-trash"></i> Clear All
+        </button>
+      </div>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active">All Notifications</button>
+      <button class="tab">Unread (3)</button>
+      <button class="tab">System Alerts</button>
+      <button class="tab">User Actions</button>
+    </div>
+    
+    <div class="notification-list">
+      <div class="notification-item unread">
+        <div class="notification-icon alert">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="notification-content">
+          <h3>New vendor signup requires approval</h3>
+          <p>Vendor "Dreamer Photography" has signed up and is awaiting approval. Category: Decorations.</p>
+          <small>Today, 10:30 AM</small>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-small"><i class="fas fa-check"></i> Approve</button>
+          <button class="btn-small"><i class="fas fa-times"></i> Reject</button>
+        </div>
+      </div>
+      
+      <div class="notification-item unread">
+        <div class="notification-icon success">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Report from user has been resolved</h3>
+          <p>The complaint regarding missing booking has been resolved. User confirmed receipt of refund.</p>
+          <small>Yesterday, 3:15 PM</small>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-small"><i class="fas fa-eye"></i> View Details</button>
+        </div>
+      </div>
+      
+      <div class="notification-item">
+        <div class="notification-icon info">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="notification-content">
+          <h3>System maintenance scheduled</h3>
+          <p>Scheduled maintenance window: July 15, 2023 from 2:00 AM to 4:00 AM (UTC).</p>
+          <small>2 days ago</small>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-small"><i class="fas fa-eye"></i> View Details</button>
+        </div>
+      </div>
+      
+      <div class="notification-item unread">
+        <div class="notification-icon warning">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Unusual login activity detected</h3>
+          <p>Multiple failed login attempts detected for admin account from IP: 192.168.1.45.</p>
+          <small>3 days ago</small>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-small"><i class="fas fa-lock"></i> Secure Account</button>
+          <button class="btn-small"><i class="fas fa-eye"></i> View Details</button>
+        </div>
+      </div>
+      
+      <div class="notification-item">
+        <div class="notification-icon event">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="notification-content">
+          <h3>New event created</h3>
+          <p>User "Fathima" has created a new event: "Birthday Party" for September 15.</p>
+          <small>4 days ago</small>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-small"><i class="fas fa-eye"></i> View Event</button>
+        </div>
+      </div>
+      
+      <div class="notification-item">
+        <div class="notification-icon payment">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <div class="notification-content">
+          <h3>Payment processed</h3>
+          <p>Payment of LKR 450 000 for event "Wedding Party" has been successfully processed.</p>
+          <small>1 week ago</small>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-small"><i class="fas fa-eye"></i> View Details</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination">
+      <button disabled><i class="fas fa-chevron-left"></i></button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Vendors - Eventify</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <span class="welcome">Manage Vendors</span>
+      <div class="notification-bell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </div>
+      <div class="user-avatar">
+        <i class="fas fa-user-shield"></i>
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="manage-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+        <li class="active"><a href="manage-vendors.html"><i class="fas fa-store"></i> Manage Vendors</a></li>
+        <li><a href="view-events.html"><i class="fas fa-calendar-alt"></i> View Events</a></li>
+        <li><a href="content-management.html"><i class="fas fa-edit"></i> Content</a></li>
+        <li><a href="reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        <li><a href="system-notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="list-page">
+    <div class="page-header">
+      <h1>Vendor Management</h1>
+      <div class="page-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search vendors...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="btn-primary" onclick="location.href='add-vendor.html'">
+          <i class="fas fa-store-alt"></i> Add New Vendor
+        </button>
+      </div>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active">All Vendors (45)</button>
+      <button class="tab">Pending Approval (3)</button>
+      <button class="tab">Verified (38)</button>
+      <button class="tab">Suspended (4)</button>
+    </div>
+    
+    <div class="filters">
+      <div class="filter-group">
+        <label>Category:</label>
+        <select>
+          <option>All Categories</option>
+          <option>Catering</option>
+          <option>Entertainment</option>
+          <option>Venues</option>
+          <option>Photography</option>
+          <option>Decorations</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Location:</label>
+        <select>
+          <option>All Locations</option>
+          <option>Colombo</option>
+          <option>Galle</option>
+          <option>Kandy</option>
+          <option>Negombo</option>
+          <option>Mirissa</option>
+          <option>Ella</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Sort By:</label>
+        <select>
+          <option>Newest First</option>
+          <option>Oldest First</option>
+          <option>Rating (High-Low)</option>
+          <option>Rating (Low-High)</option>
+          <option>Name (A-Z)</option>
+          <option>Name (Z-A)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="vendor-list">
+      <div class="vendor-card">
+        <div class="vendor-avatar">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="vendor-details">
+          <h3>DJ Max <span class="rating"><i class="fas fa-star"></i> 4.8</span></h3>
+          <p><i class="fas fa-tag"></i> Entertainment</p>
+          <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
+          <p><i class="fas fa-envelope"></i> djmax@music.com</p>
+          <p><i class="fas fa-phone"></i> +94 76 123 4567</p>
+        </div>
+        <div class="vendor-stats">
+          <div class="stat">
+            <span class="stat-value">24</span>
+            <span class="stat-label">Events</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">18</span>
+            <span class="stat-label">Bookings</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">4.8</span>
+            <span class="stat-label">Rating</span>
+          </div>
+        </div>
+        <div class="vendor-actions">
+          <button class="btn-small btn-warning"><i class="fas fa-ban"></i> Suspend</button>
+          <button class="btn-small"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn-small btn-danger"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+      </div>
+      
+      <div class="vendor-card">
+        <div class="vendor-avatar">
+          <i class="fas fa-birthday-cake"></i>
+        </div>
+        <div class="vendor-details">
+          <h3>Katugastota cater <span class="rating"><i class="fas fa-star"></i> 4.5</span></h3>
+          <p><i class="fas fa-tag"></i> Catering</p>
+          <p><i class="fas fa-map-marker-alt"></i> kandy, Sri Lanka</p>
+          <p><i class="fas fa-envelope"></i> katugastota@cater.com</p>
+          <p><i class="fas fa-phone"></i> +94 76 987 6543</p>
+        </div>
+        <div class="vendor-stats">
+          <div class="stat">
+            <span class="stat-value">15</span>
+            <span class="stat-label">Events</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">12</span>
+            <span class="stat-label">Bookings</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">4.5</span>
+            <span class="stat-label">Rating</span>
+          </div>
+        </div>
+        <div class="vendor-actions">
+          <button class="btn-small btn-warning"><i class="fas fa-ban"></i> Suspend</button>
+          <button class="btn-small"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn-small btn-danger"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+      </div>
+      
+      <div class="vendor-card pending">
+        <div class="vendor-avatar">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="vendor-details">
+          <h3>Event Magic by Hewas <span class="badge pending">Pending</span></h3>
+          <p><i class="fas fa-tag"></i> Decorations</p>
+          <p><i class="fas fa-map-marker-alt"></i> Mirissa, Sri Lanka</p>
+          <p><i class="fas fa-envelope"></i> Hewas@events.com</p>
+          <p><i class="fas fa-phone"></i> +94 71 456 7890</p>
+        </div>
+        <div class="vendor-stats">
+          <div class="stat">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Events</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Bookings</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">-</span>
+            <span class="stat-label">Rating</span>
+          </div>
+        </div>
+        <div class="vendor-actions">
+          <button class="btn-small btn-success"><i class="fas fa-check"></i> Approve</button>
+          <button class="btn-small"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn-small btn-danger"><i class="fas fa-times"></i> Reject</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination">
+      <button disabled><i class="fas fa-chevron-left"></i></button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
