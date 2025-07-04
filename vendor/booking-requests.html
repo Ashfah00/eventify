@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Requests - Eventify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="dark-theme">
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    <nav class="nav-menu">
+      <a href="vendor-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a href="booking-requests.html" class="active"><i class="fas fa-inbox"></i> Bookings</a>
+      <a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+      <a href="vendor-chat.html"><i class="fas fa-comments"></i> Messages</a>
+      <div class="nav-right">
+        <a href="vendor-profile.html" class="btn-outline"><i class="fas fa-user"></i> Profile</a>
+      </div>
+    </nav>
+    <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+  </header>
+
+  <section class="page-hero">
+    <h1>Booking <span class="highlight">Requests</span></h1>
+    <p>Manage your incoming event requests</p>
+  </section>
+
+  <section class="booking-requests-container">
+    <div class="requests-header">
+      <div class="requests-filter">
+        <button class="filter-btn active">All Requests (5)</button>
+        <button class="filter-btn">Pending (3)</button>
+        <button class="filter-btn">Confirmed (2)</button>
+        <button class="filter-btn">Declined (0)</button>
+      </div>
+      <div class="requests-search">
+        <input type="text" placeholder="Search requests...">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+
+    <div class="requests-list">
+      <!-- Pending Request -->
+      <div class="request-card pending">
+        <div class="request-badge">Pending</div>
+        <div class="request-header">
+          <div class="request-client">
+            <img src="../images/himashi.jpg" alt="Himashi" class="client-avatar">
+            <div>
+              <h3>Wedding Reception</h3>
+              <p>Requested by <strong>Himashi</strong></p>
+            </div>
+          </div>
+          <div class="request-meta">
+            <span class="request-date"><i class="fas fa-calendar-alt"></i> Aug 12, 2025</span>
+            <span class="request-price"><i class="fas fa-dollar-sign"></i> 75,000</span>
+          </div>
+        </div>
+        <div class="request-details">
+          <p><i class="fas fa-map-marker-alt"></i> Colombo Hotel, Colombo</p>
+          <p><i class="fas fa-clock"></i> 6:00 PM - 11:00 PM (5 hours)</p>
+          <div class="request-message">
+            <p>"Looking for a DJ for our wedding reception with a mix of English and Sinhala music. Need full sound system and lighting."</p>
+          </div>
+        </div>
+        <div class="request-actions">
+          <button class="btn-primary accept-btn"><i class="fas fa-check"></i> Accept</button>
+          <button class="btn-outline decline-btn"><i class="fas fa-times"></i> Decline</button>
+          <button class="btn-text message-btn"><i class="fas fa-comment"></i> Message</button>
+          <button class="btn-text details-btn"><i class="fas fa-info-circle"></i> Details</button>
+        </div>
+      </div>
+
+      <!-- Pending Request -->
+      <div class="request-card pending">
+        <div class="request-badge">Pending</div>
+        <div class="request-header">
+          <div class="request-client">
+            <img src="../images/oviya.jpg" alt="Oviya" class="client-avatar">
+            <div>
+              <h3>Birthday Party </h3>
+              <p>Requested by <strong>Oviya</strong></p>
+            </div>
+          </div>
+          <div class="request-meta">
+            <span class="request-date"><i class="fas fa-calendar-alt"></i> Aug 22, 2025</span>
+            <span class="request-price"><i class="fas fa-dollar-sign"></i> 50,000</span>
+          </div>
+        </div>
+        <div class="request-details">
+          <p><i class="fas fa-map-marker-alt"></i> Kandy Convention Center, Kandy</p>
+          <p><i class="fas fa-clock"></i> 3:00 PM - 6:00 PM (3 hours)</p>
+          <div class="request-message">
+            <p>"Need a professional DJ for our annual company party, mostly English pop music. Approximately 100 guests expected."</p>
+          </div>
+        </div>
+        <div class="request-actions">
+          <button class="btn-primary accept-btn"><i class="fas fa-check"></i> Accept</button>
+          <button class="btn-outline decline-btn"><i class="fas fa-times"></i> Decline</button>
+          <button class="btn-text message-btn"><i class="fas fa-comment"></i> Message</button>
+          <button class="btn-text details-btn"><i class="fas fa-info-circle"></i> Details</button>
+        </div>
+      </div>
+
+
+      <!-- Pending Request -->
+      <div class="request-card pending">
+        <div class="request-badge">Pending</div>
+        <div class="request-header">
+          <div class="request-client">
+            <img src="../images/Dinumi.jpg" alt="Dinumi" class="client-avatar">
+            <div>
+              <h3>Engagement Party</h3>
+              <p>Requested by <strong>Dinumi</strong></p>
+            </div>
+          </div>
+          <div class="request-meta">
+            <span class="request-date"><i class="fas fa-calendar-alt"></i> Oct 15, 2025</span>
+            <span class="request-price"><i class="fas fa-dollar-sign"></i> 65,000</span>
+          </div>
+        </div>
+        <div class="request-details">
+          <p><i class="fas fa-map-marker-alt"></i> Waters Edge, Battaramulla</p>
+          <p><i class="fas fa-clock"></i> 5:00 PM - 10:00 PM (5 hours)</p>
+          <div class="request-message">
+            <p>"Looking for a DJ who can play a mix of English, Sinhala, and Hindi music for our engagement party. Need wireless mic for speeches."</p>
+          </div>
+        </div>
+        <div class="request-actions">
+          <button class="btn-primary accept-btn"><i class="fas fa-check"></i> Accept</button>
+          <button class="btn-outline decline-btn"><i class="fas fa-times"></i> Decline</button>
+          <button class="btn-text message-btn"><i class="fas fa-comment"></i> Message</button>
+          <button class="btn-text details-btn"><i class="fas fa-info-circle"></i> Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="requests-pagination">
+      <button class="btn-outline" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+      <span>Page 1 of 2</span>
+      <button class="btn-outline">Next <i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Vendor</h3>
+          <a href="vendor-dashboard.html">Dashboard</a>
+          <a href="booking-requests.html">Bookings</a>
+          <a href="vendor-profile.html">Profile</a>
+        </div>
+       <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  
+    
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
