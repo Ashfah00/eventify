@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Marketplace - Eventify</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <div class="search-bar">
+        <input type="text" placeholder="Search vendors...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="notification-bell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </div>
+      <div class="user-avatar">
+        <img src="../images/ilma.jpg" alt="Ilma Fareed">
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="customer-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="my-events.html"><i class="fas fa-calendar-alt"></i> My Events</a></li>
+        <li class="active"><a href="vendor-marketplace.html"><i class="fas fa-store"></i> Marketplace</a></li>
+        <li><a href="create-event.html"><i class="fas fa-plus-circle"></i> Create Event</a></li>
+        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li><a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profile</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="marketplace-page">
+    <section class="marketplace-hero">
+      <h1>Find Your Perfect Vendors</h1>
+      <p>Discover top-rated professionals to make your event unforgettable</p>
+      <div class="hero-search">
+        <input type="text" placeholder="What are you looking for?">
+        <input type="text" placeholder="Location">
+        <button class="btn-primary"><i class="fas fa-search"></i> Search</button>
+      </div>
+    </section>
+    
+    <section class="marketplace-categories">
+      <h2 class="section-title">Browse by Category</h2>
+      <div class="category-grid">
+        <!-- Music & Entertainment -->
+        <div class="category-card" onclick="filterByCategory('music')">
+          <div class="category-icon" style="background-color: #FF6B6B;">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Music & Entertainment</h3>
+          <p>DJs, bands, performers</p>
+          <span class="vendor-count">24 vendors</span>
+        </div>
+        
+        <!-- Food & Beverage -->
+        <div class="category-card" onclick="filterByCategory('food')">
+          <div class="category-icon" style="background-color: #4ECDC4;">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Food & Beverage</h3>
+          <p>Catering, bars, desserts</p>
+          <span class="vendor-count">18 vendors</span>
+        </div>
+        
+        <!-- Decorations -->
+        <div class="category-card" onclick="filterByCategory('decor')">
+          <div class="category-icon" style="background-color: #45B7D1;">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h3>Decorations</h3>
+          <p>Floral, lighting, themes</p>
+          <span class="vendor-count">15 vendors</span>
+        </div>
+        
+        <!-- Venues -->
+        <div class="category-card" onclick="filterByCategory('venue')">
+          <div class="category-icon" style="background-color: #A37EBA;">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <h3>Venues</h3>
+          <p>Hotels, outdoor spaces</p>
+          <span class="vendor-count">12 vendors</span>
+        </div>
+        
+        <!-- Photography -->
+        <div class="category-card" onclick="filterByCategory('photo')">
+          <div class="category-icon" style="background-color: #FFA07A;">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3>Photography</h3>
+          <p>Photos, videos, drones</p>
+          <span class="vendor-count">9 vendors</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="marketplace-filters">
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>Sort By:</label>
+          <select>
+            <option>Recommended</option>
+            <option>Top Rated</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Most Booked</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Price Range:</label>
+          <select>
+            <option>All Prices</option>
+            <option>Under 25 000/=</option>
+            <option>25 000/= - 75 000/=</option>
+            <option>75 000/= - 150 000/=</option>
+            <option>Over 150 000/=</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Location:</label>
+          <select>
+            <option>Any Location</option>
+            <option>Colombo</option>
+            <option>Galle</option>
+            <option>Kandy</option>
+            <option>Negombo</option>
+          </select>
+        </div>
+        
+        <button class="btn-secondary"><i class="fas fa-filter"></i> Apply Filters</button>
+      </div>
+    </section>
+    
+    <section class="featured-vendors">
+      <div class="section-header">
+        <h2>Featured Vendors</h2>
+        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="vendor-grid">
+        <!-- Vendor 1 - DJ Max -->
+        <div class="vendor-card" data-category="music">
+          <div class="vendor-image">
+            <img src="../images/dj max 2.jpg" alt="DJ Max">
+            <span class="vendor-badge">Featured</span>
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>DJ Max</h3>
+            <p class="vendor-category">Music & Entertainment</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 4.7 (128)</span>
+              <span class="price-range">50 000/= - 200 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+            <p class="vendor-description">Professional DJ with 5+ years experience specializing in weddings and corporate events.</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <!-- Vendor 2 - Bake It Sweet -->
+        <div class="vendor-card" data-category="food">
+          <div class="vendor-image">
+            <img src="../images/Galle cater 2.jpg" alt="Galle Caters">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>Galle Caters</h3>
+            <p class="vendor-category">Food & Beverage</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 5.0 (94)</span>
+              <span class="price-range">50 000/= - 250 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Galle</p>
+            <p class="vendor-description">Authentic Caters specializing in custom wedding food and Desserts.</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <!-- Vendor 3 - Flower Power -->
+        <div class="vendor-card" data-category="decor">
+          <div class="vendor-image">
+            <img src="../images/gallery 2.jpg" alt="Flower Power">
+            <span class="vendor-badge">Popular</span>
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>Flower Power</h3>
+            <p class="vendor-category">Decorations</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 4.2 (76)</span>
+              <span class="price-range">60 000/= - 150 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Kandy</p>
+            <p class="vendor-description">Floral design studio creating stunning arrangements for any occasion.</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="category-vendors">
+      <div class="section-header">
+        <h2>Music & Entertainment</h2>
+        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="vendor-grid">
+        <!-- Vendor 1 - DJ Max -->
+        <div class="vendor-card" data-category="music">
+          <div class="vendor-image">
+            <img src="../images/dj max 2.jpg" alt="DJ Max">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>DJ Max</h3>
+            <p class="vendor-category">Music & Entertainment</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 4.7 (128)</span>
+              <span class="price-range">50 000/= - 200 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <!-- Vendor 2 - The Groove Masters -->
+        <div class="vendor-card" data-category="music">
+          <div class="vendor-image">
+            <img src="../images/dj ash.jpg" alt="The Groove Masters">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>The Groove Masters</h3>
+            <p class="vendor-category">Music & Entertainment</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 4.2 (95)</span>
+              <span class="price-range">40 000/= - 160 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Kandy</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <!-- Vendor 3 - Colombo Jazz Quartet -->
+        <div class="vendor-card" data-category="music">
+          <div class="vendor-image">
+            <img src="../images/dj y.jpg" alt="Colombo Jazz Quartet">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>Colombo Jazz Quartet</h3>
+            <p class="vendor-category">Music & Entertainment</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 5.0 (64)</span>
+              <span class="price-range">80 000/= - 250 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="category-vendors">
+      <div class="section-header">
+        <h2>Food & Beverage</h2>
+        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="vendor-grid">
+        <!-- Vendor 1 - Bake It Sweet -->
+        <div class="vendor-card" data-category="food">
+          <div class="vendor-image">
+            <img src="../images/cake.jpg" alt="Bake It Sweet">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>Bake It Sweet</h3>
+            <p class="vendor-category">Food & Beverage</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 5.0 (94)</span>
+              <span class="price-range">25 000/= - 150 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Galle</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <!-- Vendor 2 - Spice Catering -->
+        <div class="vendor-card" data-category="food">
+          <div class="vendor-image">
+            <img src="../images/Tasty.jpg" alt="Spice Catering">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>Spice Catering</h3>
+            <p class="vendor-category">Food & Beverage</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 4.6 (112)</span>
+              <span class="price-range">$$</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <!-- Vendor 3 - Cocktail Masters -->
+        <div class="vendor-card" data-category="food">
+          <div class="vendor-image">
+            <img src="../images/cocktail.jpg" alt="Cocktail Masters">
+            <button class="save-vendor"><i class="far fa-heart"></i></button>
+          </div>
+          <div class="vendor-info">
+            <h3>Cocktail Masters</h3>
+            <p class="vendor-category">Food & Beverage</p>
+            <div class="vendor-meta">
+              <span class="rating"><i class="fas fa-star"></i> 4.0 (87)</span>
+              <span class="price-range">20 000/= -  80 000/=</span>
+            </div>
+            <p class="vendor-location"><i class="fas fa-map-marker-alt"></i> Negombo</p>
+            <button class="btn-primary" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="pagination">
+      <button disabled><i class="fas fa-chevron-left"></i></button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
+

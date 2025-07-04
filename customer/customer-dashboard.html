@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Eventify</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <div class="user-info">
+        <span class="welcome">Welcome back, <strong>Ilma Fareed</strong> 👋</span>
+        <div class="notification-bell">
+          <i class="fas fa-bell"></i>
+          <span class="notification-count">3</span>
+        </div>
+      </div>
+      <div class="user-avatar">
+        <img src="../images/ilma.jpg" alt="User Ilma">
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li class="active"><a href="customer-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="my-events.html"><i class="fas fa-calendar-alt"></i> My Events</a></li>
+        <li><a href="vendor-marketplace.html"><i class="fas fa-store"></i> Marketplace</a></li>
+        <li><a href="create-event.html"><i class="fas fa-plus-circle"></i> Create Event</a></li>
+        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li><a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profile</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard">
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>Plan Your Perfect Event</h1>
+        <p>Discover amazing vendors, create unforgettable experiences, and manage everything in one place.</p>
+        <button class="btn-primary" onclick="location.href='create-event.html'">
+          <i class="fas fa-plus"></i> Create New Event
+        </button>
+      </div>
+      <div class="hero-image">
+        <img src="../images/event planning.jpg"alt="Event Planning">
+      </div>
+    </section>
+    
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="stat-content">
+          <h3>Upcoming Events</h3>
+          <p class="count">3</p>
+          <a href="my-events.html">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-bookmark"></i>
+        </div>
+        <div class="stat-content">
+          <h3>Active Bookings</h3>
+          <p class="count">12</p>
+          <a href="my-events.html">Manage Bookings <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="stat-content">
+          <h3>Saved Vendors</h3>
+          <p class="count">8</p>
+          <a href="vendor-marketplace.html">Browse More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="quick-actions">
+      <h2 class="section-title">Quick Actions</h2>
+      <div class="action-grid">
+        <div class="action-card" onclick="location.href='vendor-marketplace.html'">
+          <div class="action-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Find Vendors</h3>
+          <p>Browse our curated selection of top-rated vendors</p>
+        </div>
+        <div class="action-card" onclick="location.href='create-event.html'">
+          <div class="action-icon">
+            <i class="fas fa-plus"></i>
+          </div>
+          <h3>Create Event</h3>
+          <p>Start planning your next amazing event</p>
+        </div>
+        <div class="action-card" onclick="location.href='my-events.html'">
+          <div class="action-icon">
+            <i class="fas fa-calendar"></i>
+          </div>
+          <h3>My Events</h3>
+          <p>Manage all your upcoming events</p>
+        </div>
+        <div class="action-card" onclick="location.href='notifications.html'">
+          <div class="action-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Notifications</h3>
+          <p>View your recent activity and messages</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="recommended-vendors">
+      <h2 class="section-title">Recommended For You</h2>
+      <div class="vendor-carousel">
+        <div class="vendor-card featured">
+          <div class="vendor-image">
+            <img src="../images/foto cube.jpg" alt="The Foto Cube">
+            <span class="featured-badge">Featured</span>
+          </div>
+          <div class="vendor-info">
+            <h3>The Photo Cube</h3>
+            <p class="category">Photography</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>4.7 (128 reviews)</span>
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Colombo</p>
+            <button class="btn-small" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+        
+        <div class="vendor-card">
+          <div class="vendor-image">
+            <img src="../images/Galle cater 2.jpg" alt="Galle Caterers">
+          </div>
+          <div class="vendor-info">
+            <h3>Galle Cateres</h3>
+            <p class="category">Catering</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>5.0 (94 reviews)</span>
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Galle</p>
+            <button class="btn-small" onclick="location.href='vendor-profile.html'">View Profile</button>
+          </div>
+        </div>
+    </section>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

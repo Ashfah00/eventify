@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Settings - Eventify</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+      <img src="../img/logo.jpg" alt="Eventify Logo" class="logo-img">
+      <span>Eventify</span>
+    </div>
+    </div>
+    <div class="navbar-right">
+      <div class="notification-bell">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </div>
+      <div class="user-avatar">
+        <img src="../images/ilma.jpg" alt="Ilma Fareed">
+      </div>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="customer-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="my-events.html"><i class="fas fa-calendar-alt"></i> My Events</a></li>
+        <li><a href="vendor-marketplace.html"><i class="fas fa-store"></i> Marketplace</a></li>
+        <li><a href="create-event.html"><i class="fas fa-plus-circle"></i> Create Event</a></li>
+        <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li class="active"><a href="profile-settings.html"><i class="fas fa-user-cog"></i> Profile</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="profile-page">
+    <div class="profile-header">
+      <h1>Profile Settings</h1>
+      <p>Manage your account information and preferences</p>
+    </div>
+    
+    <div class="profile-tabs">
+      <button class="tab active">Personal Info</button>
+      <button class="tab">Security</button>
+      <button class="tab">Notifications</button>
+      <button class="tab">Preferences</button>
+    </div>
+    
+    <div class="profile-content">
+      <div class="profile-sidebar">
+        <div class="avatar-upload">
+          <div class="avatar-preview">
+            <img src="../images/ilma.jpg" alt="Profile Picture" id="avatarPreview">
+          </div>
+          <div class="upload-controls">
+            <button class="btn-small">
+              <i class="fas fa-camera"></i> Change
+            </button>
+            <button class="btn-small btn-danger">
+              <i class="fas fa-trash"></i> Remove
+            </button>
+          </div>
+        </div>
+        
+        <div class="profile-menu">
+          <button class="menu-item active">
+            <i class="fas fa-user"></i> Basic Information
+          </button>
+          <button class="menu-item">
+            <i class="fas fa-map-marker-alt"></i> Address
+          </button>
+          <button class="menu-item">
+            <i class="fas fa-phone"></i> Contact Details
+          </button>
+          <button class="menu-item">
+            <i class="fas fa-heart"></i> Interests
+          </button>
+        </div>
+      </div>
+      
+      <div class="profile-form">
+        <form>
+          <div class="form-section">
+            <h2>Basic Information</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" value="Alex" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" value="Johnson" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" value="alex.johnson@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="birthday">Date of Birth</label>
+              <input type="date" id="birthday" value="1990-05-15">
+            </div>
+            
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="gender" value="male" checked> Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="other"> Other
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-section">
+            <h2>Change Password</h2>
+            <div class="form-group">
+              <label for="currentPassword">Current Password</label>
+              <input type="password" id="currentPassword">
+            </div>
+            
+            <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input type="password" id="newPassword">
+            </div>
+            
+            <div class="form-group">
+              <label for="confirmPassword">Confirm New Password</label>
+              <input type="password" id="confirmPassword">
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="btn-secondary">
+              Cancel
+            </button>
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-save"></i> Save Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../img/logo.jpg" alt="Eventify Logo">
+        <p>Making event planning simple, seamless, and special.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-group">
+          <h3>Support</h3>
+          <a href="#">FAQs</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="link-group">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="mailto:info@eventify.com">info@eventify.com</a>
+          <a href="tel:+94112345678">+94 112 345 678</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eventify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
+
